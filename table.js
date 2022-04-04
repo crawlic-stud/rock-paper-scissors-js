@@ -23,8 +23,8 @@ class RulesTable extends Table
     }
 
     print() {
-        console.log("RED - is computer's move.".red)
-        console.log("WHITE", "- is player's move.")
+        console.log("*RED - is computer's move.".red)
+        console.log("*WHITE", "- is player's move.")
         console.log(this.table.toString())
     }
 }
