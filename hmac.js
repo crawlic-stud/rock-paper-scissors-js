@@ -1,16 +1,11 @@
-const crypto = require('crypto')
+const SHA3_HMAC = require('crypto-js/hmac-sha3');
 
 
 class HMACgenerator 
 {
-    constructor(hash_func='sha1') {
-        this.hash_func = hash_func;
-    }
-
     createHMAC(text, key) {
-        let hmac = crypto.createHmac(this.hash_func, key);
-        hmac.update(text);
-        return hmac.digest('hex');
+        let hmac = SHA3_HMAC(text, key);
+        return hmac;
     }
 }
 

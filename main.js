@@ -10,7 +10,7 @@ const HMACgenerator = require('./hmac.js')
 const rules = new Rules(process.argv.slice(2));
 const table = new RulesTable(rules);
 const key = new RandomKey(32);
-const generator = new HMACgenerator('sha1');
+const generator = new HMACgenerator();
 
 
 let restart = "y";
