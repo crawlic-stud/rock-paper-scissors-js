@@ -1,7 +1,9 @@
 class Rules 
 {
     constructor(args) {
-        if (args.length % 2 == 0) throw "Argument's length can not be an even number";
+        args = [...new Set(args)];
+        if (args.length < 2) throw "Can not be less than 2 arguments.".red;
+        if (args.length % 2 == 0) throw "Argument's length can not be an even number.".red;
         this.args = args;
         this.rules = {};
         this.create();
